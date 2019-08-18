@@ -342,7 +342,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 			tabla = new Tabla<Object>(respuesta);
 			JOptionPane.showMessageDialog(null, "Tabla " + this.tabla.getNombre() + " creada");
 
-			jLTabla.setText("**Se creó la tabla " + this.tabla.getNombre());
+			jLTabla.setText("**Se creo la tabla " + this.tabla.getNombre());
 			jLTitutoTab.setText("Tabla " + this.tabla.getNombre());
 
 			jMCrearTabla.setEnabled(false);
@@ -362,7 +362,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 		String[] nombreCampo;
 
 		if (this.cCrearTab == 0) {
-			JOptionPane.showMessageDialog(null, "Primero debe crear una tabla");
+		JOptionPane.showMessageDialog(null, "Primero debe crear una tabla!");//modificado el 17/08/19 11:06pm
 		} else if (this.tabla.countRegistros == 0) {
 
 			nombre = JOptionPane.showInputDialog("Ingrese el nombre del campo ");
