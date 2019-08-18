@@ -1,9 +1,9 @@
 /****ELABORADO POR****/
 
 /*
- *Flavio C�sar Betanco Amaya		
- *Sergio Enrique P�rez Figueroa            
- *H�ctor David Maradiaga Garc�a           
+ *Flavio César Betanco Amaya		
+ *Sergio Enrique Pérez Figueroa            
+ *Héctor David Maradiaga García           
 */
 
 
@@ -69,7 +69,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-		jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Menú Principal"));
+		jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("MenÃº Principal"));
 
 		jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -337,7 +337,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 			String respuesta = JOptionPane.showInputDialog("Ingrese el nombre de la Tabla");
 
 			while ((respuesta == null) || (respuesta.equals(""))) {
-				respuesta = JOptionPane.showInputDialog("Es obligatorio ingresar el nombre, ingreselo de nuevo");
+				respuesta = JOptionPane.showInputDialog("Es OBLIGATORIO ingresar el Nombre, ingreselo de nuevo");//modificado 17/08/19 11:27pm
 			}
 			tabla = new Tabla<Object>(respuesta);
 			JOptionPane.showMessageDialog(null, "Tabla " + this.tabla.getNombre() + " creada");
@@ -366,7 +366,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 		} else if (this.tabla.countRegistros == 0) {
 
 			nombre = JOptionPane.showInputDialog("Ingrese el nombre del campo ");
-			descripcion = JOptionPane.showInputDialog("Ingrese la descripción del campo ");
+			descripcion = JOptionPane.showInputDialog("Ingrese la descripciÃ³n del campo ");
 			tipoDato = JOptionPane.showInputDialog("Ingrese el tipo de dato del campo ");
 
 			if (m == 0) {
@@ -384,7 +384,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
 			}
 
-			jLCampo.setText("**Se creó el campo " + nombre);
+			jLCampo.setText("**Se creÃ³ el campo " + nombre);
 			m++;
 		} else {
 			JOptionPane.showMessageDialog(null, "Ya no puede agregar mas campos");
@@ -558,7 +558,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
 			this.tabla.actualizarRegistro(num, arreglo);
 			this.clickImpTabla(evt);
-			jLRegistro.setText("**Se actualizó el registro " + num);
+			jLRegistro.setText("**Se actualizÃ³ el registro " + num);
 			JOptionPane.showMessageDialog(null, "Registro actualizado");
 		}
 
